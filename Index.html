@@ -1,0 +1,40 @@
+<!DOCTYPE html> <!-- y es necesario que siempre usemos este campo para que pueda ser leido en todos los navegadores -->
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8"> <!-- formato texto mas utilizado -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- vista en zoom 100 -->
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="./Styles/style.css"> <!-- se requiere para indicarle al HTML que el estilo va a ir definido
+    por el archivo de style.css creado en esta misma carpeta -->
+</head>
+<body>
+    <header class="Header">
+        <nav Class="header_menu">
+            <a class="header_menu_link" href="Index.html">Home</a>
+            <a class="header_menu_link" href="about.html">Sobre mi</a>
+        </nav>
+    </header>
+    <main class="presentacion">
+        <section class="presentacion_contenido">
+            <h1 class="presentacion_contenido_titulo">Eleve tu negocio digital a otro nivel <strong class="titulo-destaque">con un Front-end de calidad!</strong></h1>
+            <!-- el strong da datos en negrilla, sin embargo se pueden modificar desde css, teniendo en cuenta que se pueden marcar
+            a traves de la clase con un nombre para hacer la modificacion de uno o varios datos con este strong -->
+    
+            <p class="presentacion_contenido_texto"><strong>¡Hola! Soy Ana García</strong>, desarrolladora Front-end con especialización en React, HTML y CSS. Ayudo a 
+                pequeños negocios y diseñadores a llevar a cabo buenas ideas. ¿Hablamos?
+            </p>
+            <div class="presentacion_enlaces">
+                <h2 class="presentacion_enlaces_subtitulo">Accede a mis redes</h2>
+                <a class="presentacion_enlaces_link" href="https://www.instagram.com/"> <img src="./assets/instagram.png"> Instagram</a> <!-- la letra a define un dato que puede ser un hiper vinculo -->
+                <a class="presentacion_enlaces_link" href="https://github.com/"><img src="./assets/github.png">Github</a>
+                <a class="presentacion_enlaces_link" href="https://www.twitch.tv/"><img src="./assets/twitch.png">Twitch</a>
+            </div>
+        </section>
+    <img class="presentacion_imagen" src="imagen.png" alt="Imagen de Ana Garcia Trabajando"> <!-- se llama a la imagen que debe estar guardada en la misma 
+    carpeta -->
+    </main>
+    <footer class="footer">
+        <p>Desarrollado por Jonathan de Armas</p>
+    </footer>
+</body>
+</html>

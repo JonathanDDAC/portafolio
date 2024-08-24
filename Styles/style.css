@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+ /*importar el tipo de letra
+que vamos a utilizar en nuestra pagina, la fuente se llama krona one se descarga desde la pagina de google "google fonts" */
+
+:root{ /* aqui se declaran las variables que se van a utilizar, se deben marcar con --*/
+    --color-primario: #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+    --color-hover: #272727;
+
+    --fuente-monserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+*{ /* Colocar el simbolo "*" indica que el cambio se va a hacer en todo el documento*/
+    padding: 0;  /* son los espacios que quedan entre un campo y otro*/
+    margin: 0;/* son los espacios que quedan entre un campo y otro*/
+}
+body{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    height: 100vh; /* aplica el 100% del viewport */
+    box-sizing: border-box;
+}
+.Header{ 
+    padding: 2% 0% 0% 15%; /* el orden de los valores de espacios es top - rigth - bottom - left */
+}
+
+.header_menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header_menu_link{
+    font-family: var(--fuente-monserrat);
+    font-size: 1.5rem; /* 1rem es equivalene a 16px en este caso necesitamos el tamaño de 24px se coloca 1.5rem px=pixeles*/ 
+    font-weight: 600;
+    color:var(--color-terciario);
+    text-decoration: none;
+}
+
+strong{
+    Color: white
+}
+
+.presentacion{
+    /* buscar en internet flex box propiedades y componentes https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+    display: flex; /* organiza en fila los componentes del html */
+    align-items: center; /*los centra dentro de la fila*/
+   /* margin: 5% 15%; /* adiciona un margen alrededor de la ventana para que no quede pegado */
+    justify-content: space-between;
+    padding: 6% 15%;
+    gap:82px;
+}
+
+.presentacion_contenido{
+    width: 50% ;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.presentacion_contenido_titulo{
+    font-size: 2.25rem;
+    font-family: "Krona One", sans-serif; /*se agrega esta fuente desde la pagina de google fonts*/
+}
+
+.titulo-destaque{ /* al strong del html se le define una clase para modificar todos los que tengan esa clase asociada */
+    color: var(--color-terciario)
+}
+
+.presentacion_contenido_texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-monserrat);
+    padding: 3% 0% 0% 0%;
+
+}
+.presentacion_enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px; /*separa los componentes*/
+}
+.presentacion_enlaces_link{
+    width: 50%; /*separacion de los botones*/
+    text-align: center; /*alineacion centrada*/
+    padding: 21.5px 0; /*para que el fondo quede mas alto se coloca el primer valor y mas ancho el segundo, como el ya esta los 
+    suficientemente ancho, se le coloca 0 para que no lo modifique */
+    border-radius: 8px; /* para que los bordes queden redondeados*/
+    font-family: var(--fuente-monserrat);
+    font-size: 1.5rem;
+    font-weight: 600; /*crea un espacio entre cada uno de los componentes*/
+    text-decoration: none;
+    color:#f6f6f6;
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.presentacion_enlaces_link:hover{ /*hover es una funcionalidad que nos permite cambiar caracterisicas del componente al pasar el 
+    mouse por su posicion*/
+    background-color: var(--color-hover);
+}
+
+.presentacion_imagen{
+    width: 50%;
+}
+.presentacion_enlaces_subtitulo{
+    font-family: var(--fuente-krona);
+
+}
+.footer{
+    background-color: #22d4fd;
+    padding: 1.5rem; /*expande el tamaño del componente*/
+    color: var(--color-terciario);
+    text-align: center;
+    font-family: var(--fuente-monserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+    
+
+}
+/*cuando la pantalla tenga menos de 1200 pixeles se la imagen cambia de posicion de fila  acolumna
+@media es como un if, si el maximo de la pantalla llega a 1200px haga esto sino no*/
+@media (max-width: 1200px){ 
+    .Header{
+        padding: 5%;
+    }
+    .header_menu{
+        justify-content: center;
+    }
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacion_contenido{
+        width:auto;
+    }
+}
